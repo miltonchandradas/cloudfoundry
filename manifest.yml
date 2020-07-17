@@ -3,6 +3,12 @@
 memory: 128M
 instances: 1
 applications:
+  - name: myapprouter
+    random-route: true
+    route: --random-route
+    path: ./approuter/
+    env:
+      destinations: '[{"name":"node-api", "url" : "https://mynode-agile-gorilla-tf.cfapps.eu10.hana.ondemand.com/", "forwardAuthToken": true}]'
   - name: mynode
     path: ./node/
     route: --random-route
@@ -11,3 +17,4 @@ applications:
     route: --random-route
 services:
   - mydest
+  - node-uaa
