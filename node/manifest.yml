@@ -1,0 +1,8 @@
+---
+# My Node.js application
+Applications:
+  - name: mynode
+    command: node server
+    instances: 1
+    memory: 128M
+    

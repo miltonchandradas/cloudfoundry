@@ -1,0 +1,13 @@
+---
+# My Node.js application
+memory: 128M
+instances: 1
+applications:
+  - name: mynode
+    path: ./node/
+    route: --random-route
+  - name: myphp
+    path: ./php/
+    route: --random-route
+services:
+  - mydest
